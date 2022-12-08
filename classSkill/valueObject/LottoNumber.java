@@ -58,6 +58,7 @@ public class LottoNumber {
 
         if (o == null || getClass() != o.getClass()) return false;
 
+        //final 중요
         final LottoNumber lottoNumber  = (LottoNumber) o;
 
         return (lottoNumber.number == this.number);
