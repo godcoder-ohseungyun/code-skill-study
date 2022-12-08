@@ -69,6 +69,10 @@ public class Lotto {
         return duplicates.size(); //교집합 리스트의 크기가 중복 카운트임
     }
 
+    public Set<LottoNumber> getNumbers(){
+        return lottoNumbers;
+    }
+
     //필요한 경우 toString 재정의 필요
     @Override
     public String toString() {
