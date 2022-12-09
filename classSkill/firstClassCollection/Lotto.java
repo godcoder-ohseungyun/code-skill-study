@@ -21,14 +21,11 @@ import java.util.stream.Collectors;
  */
 public class Lotto {
 
+    //TODO : 다른 클래스에서 사용하지만, 상식상 여기서 관리되는게 올바르다
+    public static final int lottoFee = 1000;
+
     //TODO : final 불변
     private final Set<LottoNumber> lottoNumbers; //자료 구조를 활용해 불필요 검증 로직 제거 : 중복 검사 로직이 필요 없도록 자료구조 만으로 구현
-
-    //초기화 블럭 : 클래스 로드 시점에 공통 적으로 필요한 초기 세팅이 존재하는 경우
-    static {
-        //ex Map에 기본 키 들을 미리 할당해 둔다던가
-        //이 예시에선 쓸일 없음
-    }
 
     //생성자 접근 제어
     private Lotto(Set<LottoNumber> lottoNumbers) {
@@ -67,6 +64,10 @@ public class Lotto {
         System.out.println("t: " + duplicates);
 
         return duplicates.size(); //교집합 리스트의 크기가 중복 카운트임
+    }
+
+    public boolean isContain(LottoNumber lottoNumber){
+        return lottoNumbers.contains(lottoNumber.getNumber());
     }
 
     public Set<LottoNumber> getNumbers(){
