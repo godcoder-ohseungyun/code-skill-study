@@ -67,7 +67,7 @@ public class Lotto {
     }
 
     public boolean isContain(LottoNumber lottoNumber){
-        return lottoNumbers.contains(lottoNumber.getNumber());
+        return lottoNumbers.contains(lottoNumber);
     }
 
     public Set<LottoNumber> getNumbers(){

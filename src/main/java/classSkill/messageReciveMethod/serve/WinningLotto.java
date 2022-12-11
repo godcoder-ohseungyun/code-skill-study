@@ -8,7 +8,7 @@ import classSkill.valueObject.LottoNumber;
  */
 public class WinningLotto {
 
-    private static final String BONUS_NUMBER_DUPLICATE_ERROR_MSG= "보너스 번호는 우승 번호와 중복 될 수 없습니다";
+    protected static final String BONUS_NUMBER_DUPLICATE_ERROR_MSG= "보너스 번호는 우승 번호와 중복 될 수 없습니다";
 
     //VO들
     private final Lotto winningLotto;
